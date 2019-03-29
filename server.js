@@ -21,6 +21,8 @@ const connection = mysql.createConnection({
 const port = 8500;
 
 app.use('/items', items(connection));
+app.use('/categories', categories(connection));
+app.use('/places', places(connection));
 
 
 connection.connect((err) => {
